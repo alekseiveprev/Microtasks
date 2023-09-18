@@ -8,11 +8,14 @@ import { Header } from './site/Header';
 import './style.css';
 
 export const App: FC<{ name: string }> = ({ name }) => {
-  /*  const topCars = [
+
+
+
+   const topCars = [
       {manufacturer:'BMW', model:'m5cs'},
       {manufacturer:'Mercedes', model:'e63s'},
       {manufacturer:'Audi', model:'rs6'}
-  ] */
+  ]
 
   const [students, setStudents] = useState([
     { id: 1, name: 'James', age: 8 },
@@ -28,8 +31,14 @@ export const App: FC<{ name: string }> = ({ name }) => {
     { id: 11, name: 'Christopher', age: 100 },
   ]);
 
-  return (
+  return ( <div>
     <NewComponent students={students} />
+    <TopCars table={topCars} />
+     {/* //<TopCars topCars={topCars} /> */}
+
+    </div>
+
+
 
     /* <TopCars table={topCars} /> */
     /*  <TopCars topCars={topCars} />*/
